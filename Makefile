@@ -1,10 +1,13 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -O2
 
-all: app/helloworld
+TARGET = app/helloworld
+SOURCE = app/helloworld.c
 
-app/hello: app/helloworld.c
-	$(CC) $(CFLAGS) -o app/helloworld app/helloworld.c
+all: $(TARGET)
+
+$(TARGET): $(SOURCE)
+	$(CC) $(CFLAGS) -o $(TARGET) $(SOURCE)
 
 clean:
-	rm -f app/hello
+	rm -f $(TARGET)

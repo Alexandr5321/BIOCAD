@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: hw-app
+    
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hw-app
+  template:
+    metadata:
+      labels:
+        app: hw-app
+    spec:
+      containers:
+        - name: hw-app
+          image: xelas53/helloworld:v1
+          ports:
+            - containerPort: 32777 
+

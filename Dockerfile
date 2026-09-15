@@ -4,12 +4,15 @@ RUN apk add --no-cache gcc musl-dev make
 
 WORKDIR /app
 
-COPY Makefile app/helloworld.c ./
+COPY Makefile .
+COPY app/ ./app/
 
 RUN make
 
-FROM scratch
+FROM alpine:3.20
 
-COPY --from=builder /app/helloworld .
+COPY --from=builder /app/app/helloworld /helloworld
 
-ENTRYPOINT [ "./helloworld" ]
+EXPOSE 32777
+
+ENTRYPOINT ["/helloworld"]
