@@ -144,7 +144,7 @@ http://127.0.0.1:32777
 
 ## Архитектура
 
-
+![draw.io](screenshots/00-drawio.jpg)
 
 ## Скриншоты
 
@@ -156,9 +156,14 @@ http://127.0.0.1:32777
 
 ![Docker Hub](screenshots/02-dockerhub.png)
 
+
 ### Kubernetes
 
 ![Kubernetes](screenshots/03-kubernetes.png)
+
+### Deployment, service
+
+![Kubernetes](screenshots/04-deployment-service.png)
 
 ### Port forwarding
 
